@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookmark</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="bookmark.css">
+</head>
+
+<body>
+    <div id="app-body">
+        <header>
+            <h1>Bookmark</h1>
+        </header>
+
+        <section id="app-core">
+
+            <form id="inputs-section" class="bookmark-main-section bookmark-section bookmark-section-background">
+                <div id="inputs-container">
+                    <div class="input-item">
+                        <label for="begin">Begin</label>
+                        <input type="number" id="begin" class="bookmark-input">
+                    </div>
+                    <div class="input-item">
+                        <label for="end">End</label>
+                        <input type="number" id="end" class="bookmark-input">
+                    </div>
+                    <div class="input-item">
+                        <label for="duration">Duration</label>
+                        <input type="number" id="duration" class="bookmark-input">
+                    </div>
+                </div>
+                <button id="bookmark-button" class="bookmark-input">Bookmark</button>
+            </form>
+
+            <section id="goals-container">
+                <div class="goal-item bookmark-section bookmark-section-background">
+                    <h3 class="goal-item-label">Daily goal</h3>
+                    <h3 class="goal-item-value">300</h3>
+                </div>
+                <div class="goal-item bookmark-section bookmark-section-background">
+                    <h3 class="goal-item-label">Total</h3>
+                    <h3 class="goal-item-value">400</h3>
+                </div>
+            </section>
+
+            <section id="bookmark-list-container" class="bookmark-main-section bookmark-section bookmark-section-background">
+                <div id="bookmark-title-container">
+                    <h3>Bookmarks</h3>
+                </div>
+                <div id="bookmark-items-container">
+                    <div class="bookmark-item">
+                        <h4>Page</h4>
+                        <h3>100</h3>
+                    </div>
+
+                    <div class="bookmark-item">
+                        <h4>Page</h4>
+                        <h3>100</h3>
+                    </div>
+
+                    <div class="bookmark-item">
+                        <h4>Page</h4>
+                        <h3>100</h3>
+                    </div>
+
+                    <div class="bookmark-item">
+                        <h4>Page</h4>
+                        <h3>100</h3>
+                    </div>
+
+
+                    <div class="bookmark-item">
+                        <h4>Page</h4>
+                        <h3>100</h3>
+                    </div>
+
+                    <div class="bookmark-item">
+                        <h4>Page</h4>
+                        <h3>100</h3>
+                    </div>
+
+                    <div class="bookmark-item">
+                        <h4>Page</h4>
+                        <h3>100</h3>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+</body>
+</html>
