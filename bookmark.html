@@ -15,33 +15,50 @@
 
         <section id="app-core">
 
-            <section id="inputs-section" class="bookmark-main-section bookmark-section bookmark-section-background">
+            <form
+                    id="inputs-section"
+                    class="bookmark-main-section bookmark-section bookmark-section-background"
+                    v-on:submit.prevent="calculateBookmarks"
+            >
                 <div id="inputs-container">
                     <div class="input-item">
                         <label for="begin">Begin</label>
-                        <input type="number" id="begin" class="bookmark-input" min="0">
+                        <input
+                                type="number"
+                                id="begin"
+                                class="bookmark-input"
+                                min="0"
+                                v-model.number="begin"
+                        >
                     </div>
                     <div class="input-item">
                         <label for="end">End</label>
-                        <input type="number" id="end" class="bookmark-input" min="0">
+                        <input
+                                type="number"
+                                id="end"
+                                class="bookmark-input"
+                                min="1"
+                                v-model.number="end"
+                        >
                     </div>
                     <div class="input-item">
                         <label for="duration">Duration</label>
-                        <input type="number" id="duration" class="bookmark-input" min="1" max="7">
+                        <input
+                                type="number"
+                                id="duration"
+                                class="bookmark-input"
+                                min="1"
+                                max="7"
+                                v-model.number="duration"
+                        >
                     </div>
                 </div>
                 <button id="bookmark-button" class="bookmark-input">Bookmark</button>
-            </section>
+            </form>
 
             <section id="goals-container">
-                <div class="goal-item bookmark-section bookmark-section-background">
-                    <h3 class="goal-item-label">Daily goal</h3>
-                    <h3 class="goal-item-value">300</h3>
-                </div>
-                <div class="goal-item bookmark-section bookmark-section-background">
-                    <h3 class="goal-item-label">Total</h3>
-                    <h3 class="goal-item-value">400</h3>
-                </div>
+                <goal v-bind:goal="goals.daily"></goal>
+                <goal v-bind:goal="goals.total"></goal>
             </section>
 
             <section id="bookmark-list-container" class="bookmark-main-section bookmark-section bookmark-section-background">
@@ -49,44 +66,16 @@
                     <h3>Bookmarks</h3>
                 </div>
                 <div id="bookmark-items-container">
-                    <div class="bookmark-item">
-                        <h4>Page</h4>
-                        <h3>100</h3>
-                    </div>
-
-                    <div class="bookmark-item">
-                        <h4>Page</h4>
-                        <h3>100</h3>
-                    </div>
-
-                    <div class="bookmark-item">
-                        <h4>Page</h4>
-                        <h3>100</h3>
-                    </div>
-
-                    <div class="bookmark-item">
-                        <h4>Page</h4>
-                        <h3>100</h3>
-                    </div>
-
-
-                    <div class="bookmark-item">
-                        <h4>Page</h4>
-                        <h3>100</h3>
-                    </div>
-
-                    <div class="bookmark-item">
-                        <h4>Page</h4>
-                        <h3>100</h3>
-                    </div>
-
-                    <div class="bookmark-item">
-                        <h4>Page</h4>
-                        <h3>100</h3>
-                    </div>
+                    <bookmark
+                            v-for="bookmark in bookmarks"
+                            :key="bookmark.id"
+                            v-bind:page="bookmark.page"
+                    ></bookmark>
                 </div>
             </section>
         </section>
     </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
