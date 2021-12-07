@@ -15,23 +15,23 @@
 
         <section id="app-core">
 
-            <form id="inputs-section" class="bookmark-main-section bookmark-section bookmark-section-background">
+            <section id="inputs-section" class="bookmark-main-section bookmark-section bookmark-section-background">
                 <div id="inputs-container">
                     <div class="input-item">
                         <label for="begin">Begin</label>
-                        <input type="number" id="begin" class="bookmark-input">
+                        <input type="number" id="begin" class="bookmark-input" min="0">
                     </div>
                     <div class="input-item">
                         <label for="end">End</label>
-                        <input type="number" id="end" class="bookmark-input">
+                        <input type="number" id="end" class="bookmark-input" min="0">
                     </div>
                     <div class="input-item">
                         <label for="duration">Duration</label>
-                        <input type="number" id="duration" class="bookmark-input">
+                        <input type="number" id="duration" class="bookmark-input" min="1" max="7">
                     </div>
                 </div>
                 <button id="bookmark-button" class="bookmark-input">Bookmark</button>
-            </form>
+            </section>
 
             <section id="goals-container">
                 <div class="goal-item bookmark-section bookmark-section-background">

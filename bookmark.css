@@ -49,6 +49,11 @@ input, button {
     /*height: 200px;*/
 }
 
+.bookmark-input {
+    border-radius: 7px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 /* Inputs */
 #inputs-section {
     display: flex;
@@ -71,10 +76,6 @@ input, button {
     background-color: #888DA7;
 }
 
-.bookmark-input {
-    border-radius: 7px;
-}
-
 .input-item {
     display: flex;
     flex-direction: column;
@@ -88,10 +89,21 @@ input, button {
     padding: 0 5px;
     height: 40px;
     width: 72px;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 #bookmark-button {
     height: 31px;
+    font-size: 17px;
+}
+
+#bookmark-button:hover {
+    transform: scale(1.01);
+}
+
+#bookmark-button:active {
+    transform: scale(1);
 }
 
 /* Goals */
