@@ -13,7 +13,7 @@ header {
 }
 
 header > h1 {
-    color: black;
+    color: #3C3744;
     font-size: 50px;
     font-family: 'Tinos', serif;
 }
@@ -24,7 +24,12 @@ input, button {
 
 #app-body {
     width: 500px;
-    margin: auto;
+    margin: 5% auto;
+    padding: 40px;
+    border: 2px solid #888DA7;
+    border-radius: 2%;
+    background-color: #d8f9fb;
+    box-shadow: 0 5px 10px rgba(0,0,0, 0.4);
 }
 #app-core {
     display: flex;
@@ -39,6 +44,7 @@ input, button {
 .bookmark-section {
     border-radius: 7px;
     height: 200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 .bookmark-section-background {
@@ -84,6 +90,10 @@ input, button {
     height: 60px;
 }
 
+.input-item > label {
+    padding: 4px;
+}
+
 .input-item > input {
     color: black;
     padding: 0 5px;
@@ -94,8 +104,8 @@ input, button {
 }
 
 #bookmark-button {
-    height: 31px;
-    font-size: 17px;
+    padding: 10px;
+    font-size: 18px;
 }
 
 #bookmark-button:hover {
@@ -166,6 +176,7 @@ input, button {
     width: 60px;
     background-color: white;
     border-radius: 7px;
+    box-shadow: 0 6px 6px black;
 }
 
 .bookmark-item > * {
