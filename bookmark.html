@@ -14,7 +14,6 @@
         </header>
 
         <section id="app-core">
-
             <form
                     id="inputs-section"
                     class="bookmark-section bookmark-section-background"
@@ -28,6 +27,7 @@
                                 id="begin"
                                 class="bookmark-input"
                                 min="0"
+                                required="required"
                                 v-model.number="begin"
                         >
                     </div>
@@ -38,6 +38,7 @@
                                 id="end"
                                 class="bookmark-input"
                                 min="1"
+                                required="required"
                                 v-model.number="end"
                         >
                     </div>
@@ -49,6 +50,7 @@
                                 class="bookmark-input"
                                 min="1"
                                 max="7"
+                                required="required"
                                 v-model.number="duration"
                         >
                     </div>
