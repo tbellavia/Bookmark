@@ -144,7 +144,7 @@ input, button {
 #bookmark-list-container {
     display: flex;
     flex-direction: column;
-    height: 213px;
+    min-height: 213px;
 }
 
 #bookmark-title-container {
@@ -159,10 +159,10 @@ input, button {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     align-items: center;
-    height: 154px;
-
-    flex-wrap: nowrap;
+    min-height: 154px;
+    height: auto;
 }
 
 .bookmark-item {
@@ -171,7 +171,7 @@ input, button {
 
     justify-content: space-evenly;
     align-items: center;
-
+    margin: 5px 0px 5px 10px;
     height: 80px;
     width: 60px;
     background-color: white;
