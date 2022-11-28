@@ -158,10 +158,12 @@ input, button {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    row-gap: 7px;
+    column-gap: 2px;
     flex-wrap: wrap;
     align-items: center;
     min-height: 154px;
-    height: auto;
+    padding: 10px 5px
 }
 
 .bookmark-item {
@@ -170,7 +172,6 @@ input, button {
 
     justify-content: space-evenly;
     align-items: center;
-    margin: 5px 0px 5px 10px;
     height: 80px;
     width: 60px;
     background-color: white;
