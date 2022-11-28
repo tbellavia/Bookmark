@@ -51,12 +51,16 @@ const app = new Vue({
                     window.alert("Total cannot be 0");
                 } else {
                     this.bookmarks = [];
-                    for ( let page = this.begin + daily ; page <= this.end ; page += daily ){
+                    for ( let page = this.begin + daily ; page <= (this.end - daily) ; page += daily ){
                         this.bookmarks.push({
                             id: index++,
                             page: page
                         });
                     }
+                    this.bookmarks.push({
+                        id: index,
+                        page: this.end
+                    })
                     this.goals.daily.value = daily;
                     this.goals.total.value = total;
                 }
